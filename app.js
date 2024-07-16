@@ -19,11 +19,12 @@ function copyText() {
     let textToCopy = document.getElementById('result').innerText;
     navigator.clipboard.writeText(textToCopy).then(
         () => {
-            /*clipboard succesfully set*/
+            /*portapapeles activo: contenido copiado*/
             console.log('se copió')
         },
         () => {
-            /*clipboard write failed*/
+            /*portapaples inactivo: contenido sin copiar*/
+            console.log('error al copiar')
         },
     );
 }
