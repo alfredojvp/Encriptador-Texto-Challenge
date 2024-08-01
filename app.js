@@ -46,14 +46,48 @@ function cipher() {
     return resulText;
 }
 
-function assignTextToElement() {
+function decipher() {
+    let resulText = '';
+    let textToDecipher = document.getElementById('textImput').value;
+    for (let i = 0; i < textToDecipher.length; i++) {
+        if (textToDecipher.startsWith('enter', i)) {
+            resulText += 'e'
+            i += 4; //Saltar los siguientes 4 caracteres ('enter')
+        } else if (textToDecipher.startsWith('imes', i)) {
+            resulText += 'i';
+            i += 3; //Saltar los siguientes 3 carcateres ('imes')
+        } else if (textToDecipher.startsWith('ai', i)) {
+            resulText += 'a';
+            i += 1; //Saltar los siguientes 2 carcateres ('ai')
+        } else if (textToDecipher.startsWith('ober', i)) {
+            resulText += 'o';
+            i += 3; //Saltar los siguientes 4 carcateres ('ober')
+        } else if (textToDecipher.startsWith('ufat', i)) {
+            resulText += 'u';
+            i += 3; //Saltar los siguientes 4 carcateres ('ufat')
+        } else {
+            resulText += textToDecipher[i];
+        }
+    }
+    console.log(resulText);
+    return resulText;
+}
+
+function showEncryptedText() {
     let content = document.getElementById('textImput').value;
     let encryptedText = cipher(content)
     document.getElementById('result').innerHTML = encryptedText;
-    document.getElementById('showResult').addEventListener('click', cipher);
     return;
 }
+document.getElementById('showResult').addEventListener('click', cipher);
 
+function showDecryptedText() {
+    let content = document.getElementById('textImput').value;
+    let decryptedText = decipher(content)
+    document.getElementById('result').innerHTML = decryptedText;
+    return;
+}
+document.getElementById('showDecryptedResult').addEventListener('click', decipher);
 
 function copyText() {
     let textToCopy = document.getElementById('result').innerText;
