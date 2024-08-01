@@ -1,14 +1,3 @@
-/*
-Especificaciones de la llave de cifrado:
-
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat" 
-
-*/
-
 alert('Por favor, no introduscas mayúsculas ni carácteres especiales. No serán aceptados');
 
 navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
