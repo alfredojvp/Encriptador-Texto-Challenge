@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CypherPunk Decoder</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header></header>
-    <main>
-        <h1>CypherPunk Decoder</h1>
-        <div>
-            <label for="textImput">Text to cypher: </label><br>
-            <textarea id="textImput" name="textImput" rows="4" cols="50" placeholder="Enter text here..."></textarea><br><br>
-        </div>
-        <div>
-            <button onclick="showEncryptedText();" id="showResult">Cifrar</button>
-            <button onclick="showDecryptedText();" id="showDecryptedResult">Descifrar</button>
-            <button onclick="copyText();">Copiar</button>
-        </div><br>
-        <div>
-            <div id="result"></div>
-        </div>
+    <main class="presentation">
+        <section class="presentation__content">
+            <h1 class="presentation__content__title">CypherPunk Decoder</h1>
+            <div>
+                <label for="textImput"></label><br>
+                <textarea class="presentation__input" id="textImput" name="textImput" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="presentation__text">
+                <div class="result" id="result"><img class="image" src="./assets/Muñeco.png" alt="muneco"><p class="box__text__title">Ningún mensaje fue encontrado</p><p class="box__text__subtitle">Ingresa el texto que desees encriptar o desencriptar.</p></div>
+                <div class="copy__container">
+                    <button class="button" id="copy" disabled onclick="copyText();">Copiar</button>
+                </div>
+            </div>
+        </section>
     </main>
+    <div class="warning__container">
+        <p class="warning"><img class="exclamation__image__icon" src="./assets/bi--exclamation-circle-fill.png">Solo letras minúsculas y sin acentos</p><br>
+    </div>
+    <div class="button__container">
+        <button class="button" onclick="showEncryptedText();" id="showResult">Cifrar</button>
+        <button class="button" onclick="showDecryptedText();" id="showDecryptedResult">Descifrar</button>
+    </div>
     <footer>
         <div>
             <p>Developed by Alfredo Velez</p>

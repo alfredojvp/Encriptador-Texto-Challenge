@@ -1,5 +1,3 @@
-alert('Por favor, no introduscas mayúsculas ni carácteres especiales. No serán aceptados');
-
 navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
     if (result.state === 'granted' || result.state === 'prompt') {
         /*write to the clipboard now*/
@@ -66,6 +64,7 @@ function showEncryptedText() {
     let content = document.getElementById('textImput').value;
     let encryptedText = cipher(content)
     document.getElementById('result').innerHTML = encryptedText;
+    document.getElementById('copy').removeAttribute('disabled');
     return;
 }
 document.getElementById('showResult').addEventListener('click', cipher);
@@ -74,6 +73,7 @@ function showDecryptedText() {
     let content = document.getElementById('textImput').value;
     let decryptedText = decipher(content)
     document.getElementById('result').innerHTML = decryptedText;
+    document.getElementById('copy').removeAttribute('disabled');
     return;
 }
 document.getElementById('showDecryptedResult').addEventListener('click', decipher);
