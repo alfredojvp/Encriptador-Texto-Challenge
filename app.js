@@ -79,7 +79,7 @@ function showDecryptedText() {
 document.getElementById('showDecryptedResult').addEventListener('click', decipher);
 
 function copyText() {
-    let textToCopy = document.getElementById('result').innerText;
+    let textToCopy = document.getElementById('result').value;
     navigator.clipboard.writeText(textToCopy).then(
         () => {
             /*portapapeles activo: contenido copiado*/
