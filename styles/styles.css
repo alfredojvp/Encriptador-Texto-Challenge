@@ -9,8 +9,8 @@
 }
 
 .logo {
-    padding-top: 10px;
-    margin-left: 10px;
+    padding-top: 0.625rem;
+    margin-left: 0.625rem;
     width: 7%;
 }
 
@@ -29,8 +29,9 @@ main {
 .text-area {
     border: none;
     color: #0A3871;
-    margin-top: 90px;
+    margin-top: 2.45rem;
     text-transform: lowercase;
+    resize: none;
 }
 ::placeholder {color: #0A3871;}
     .text-area:focus {
@@ -51,7 +52,9 @@ main {
     position: fixed;
     height: 750px;
     width: 335px;
+    resize: none;
 }
+
 .ciphered__message:focus {
     outline: none;
 }
@@ -121,4 +124,42 @@ footer {
     background-color: #0A3871;
 }
 
-@media (max-width: ) {}
+@media (max-width: 1200px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ciphered__message {
+        background-image: none;
+        height: 133px;
+        width: 688px;
+        margin-left: 0px;
+        transform: translateX(-400px);
+    }
+
+    .buttons {
+        margin-right: 100px;
+    }
+
+    .copy__button {
+        flex-direction: column;
+        margin-top: 90px;
+        position: absolute;
+        margin-left: 0;
+        transform: translate(-200px);
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 361px;
+    }
+}

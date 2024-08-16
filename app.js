@@ -1,9 +1,23 @@
+document.getElementById('copy').style.display = 'none'
+
 navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
     if (result.state === 'granted' || result.state === 'prompt') {
         /*write to the clipboard now*/
     }
 });
 
+function adjustMessageDimensions() {
+    let resultShowed = document.querySelector('.ciphered__message');
+    let moveCopyButton = document.querySelector('.copy__button');
+    if (window.innerWidth <= 1200) {
+        resultShowed.style.height = '330px';
+        resultShowed.style.width = '688px';
+        moveCopyButton.style.marginTop = '280px';
+    } else {
+        resultShowed.style.height = '750px';
+        resultShowed.style.width = '335px';
+    }
+}
 
 function cipher() {
     let resulText = '';
@@ -64,7 +78,11 @@ function showEncryptedText() {
     let content = document.getElementById('textImput').value;
     let encryptedText = cipher(content)
     document.getElementById('result').innerHTML = encryptedText;
+    let rmImage = document.querySelector('.ciphered__message');
+    rmImage.style.backgroundImage = 'none';
     document.getElementById('copy').removeAttribute('disabled');
+    document.getElementById('copy').style.display = 'block';
+    adjustMessageDimensions();
     return;
 }
 document.getElementById('showResult').addEventListener('click', cipher);
@@ -73,7 +91,10 @@ function showDecryptedText() {
     let content = document.getElementById('textImput').value;
     let decryptedText = decipher(content)
     document.getElementById('result').innerHTML = decryptedText;
+    let rmImage = document.querySelector('.ciphered__message');
+    rmImage.style.backgroundImage = 'none';
     document.getElementById('copy').removeAttribute('disabled');
+    document.getElementById('copy').style.display = 'block';
     return;
 }
 document.getElementById('showDecryptedResult').addEventListener('click', decipher);
