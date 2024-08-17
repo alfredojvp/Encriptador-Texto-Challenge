@@ -163,3 +163,53 @@ footer {
         margin-top: 361px;
     }
 }
+
+@media (max-width: 900px) {
+
+    body {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    main {
+        margin-left: 0px;
+    }
+
+    .text-area {
+        flex-direction: column;
+        margin-left: 50px;
+        width: 343px;
+        height: 100px;
+        
+    }
+    ::placeholder {}
+
+    .warning {
+        text-align: center;
+    }
+
+    .ciphered__message {
+        height: 186px;
+        width: 327px;
+        margin-left: 215px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin-left: 0px;
+        transform: translateX(40px);
+        gap: 24px;
+    }
+
+    .decipher__button {
+        margin-left: 0px;
+    }
+
+    footer {
+        width: 110%; /*480px*/
+    }
+
+    .footer__item {
+        font-size: 20px;
+    }
+}
