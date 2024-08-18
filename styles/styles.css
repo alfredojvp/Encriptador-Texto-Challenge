@@ -33,7 +33,7 @@ main {
     text-transform: lowercase;
     resize: none;
 }
-::placeholder {color: #0A3871;}
+::placeholder {color: #0A3871; text-transform: none;}
     .text-area:focus {
         outline: none;
     }
@@ -124,7 +124,7 @@ footer {
     background-color: #0A3871;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1025px) {
 
     body {
         flex-direction: column;
@@ -136,16 +136,21 @@ footer {
         justify-content: center;
     }
 
+    .text-area {
+        height: 14.866;
+    }
+
     .ciphered__message {
         background-image: none;
         height: 133px;
         width: 688px;
         margin-left: 0px;
         transform: translateX(-400px);
+        position: absolute;
     }
 
     .buttons {
-        margin-right: 100px;
+        margin-right: 3rem;
     }
 
     .copy__button {
@@ -160,11 +165,42 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 361px;
+        margin-top: 11.54rem;
+        width: 31.5rem;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 830px) {
+
+    .text-area {
+        height: 8.7rem;
+    }
+
+    footer {
+        width: 26.3rem;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .text-area {
+        height: 138.4px;
+    }
+
+    .section__1 {
+        width: 688px;
+    }
+
+    .buttons {
+        width: 570px;
+    }
+
+    footer {
+        width: 768px;
+    }
+}
+
+@media (max-width: 435px) {
 
     body {
         flex-direction: column;
@@ -177,15 +213,24 @@ footer {
 
     .text-area {
         flex-direction: column;
-        margin-left: 50px;
-        width: 343px;
+        margin-left: 60px;
+        width: 300px;
         height: 100px;
         
     }
     ::placeholder {}
 
+    .section__1 {
+        width: 400px;
+    }
+
+    .warning_container {
+        width: 400px;
+    }
+
     .warning {
         text-align: center;
+        width: 400px;
     }
 
     .ciphered__message {
@@ -199,6 +244,7 @@ footer {
         margin-left: 0px;
         transform: translateX(40px);
         gap: 24px;
+        width: 300px;
     }
 
     .decipher__button {
@@ -206,7 +252,7 @@ footer {
     }
 
     footer {
-        width: 110%; /*480px*/
+        width: 429.5px;
     }
 
     .footer__item {
