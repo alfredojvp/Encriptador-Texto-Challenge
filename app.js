@@ -9,7 +9,10 @@ navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
 function adjustMessageDimensions() {
     let resultShowed = document.querySelector('.ciphered__message');
     let moveCopyButton = document.querySelector('.copy__button');
-    if (window.innerWidth <= 1200) {
+    if (window.innerWidth <= 435) {
+        resultShowed.style.height = '320px';
+        resultShowed.style.width = '327px';
+    } else if (window.innerWidth <= 1025) {
         resultShowed.style.height = '330px';
         resultShowed.style.width = '688px';
         moveCopyButton.style.marginTop = '280px';
