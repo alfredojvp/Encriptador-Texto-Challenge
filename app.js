@@ -1,3 +1,4 @@
+//Ocultar el botón de 'copiar' (hasta que se accione la función de cifrado/descifrado y mostrar el mensaje en pantalla)
 document.getElementById('copy').style.display = 'none'
 
 navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
@@ -6,6 +7,7 @@ navigator.permissions.query({name: 'clipboard-write'}).then((result) => {
     }
 });
 
+//Esta funcioón permite alterar y expandir de forma dinámica la ventanba donde aparecerá el mensaje cifrado/descifrado. Altera las variables 'width' y 'height' en el CSS de las versiónes mobile para adaptar el recuadro de mensaje acorde a las dimensiónes de la pantalla del dispositivo
 function adjustMessageDimensions() {
     let resultShowed = document.querySelector('.ciphered__message');
     let moveCopyButton = document.querySelector('.copy__button');
@@ -22,6 +24,7 @@ function adjustMessageDimensions() {
     }
 }
 
+//La función que permite cambiar cada vocal o caracter según las especificaciones del Challenge Encriptador de texto de Alura
 function cipher() {
     let resulText = '';
     let textToCipher = document.getElementById('textImput').value;
@@ -50,6 +53,7 @@ function cipher() {
     return resulText;
 }
 
+//La función que permite descifrar el mensaje cifrado anteriormente de acuerdo a la función programada según las especificaciones del Challenge Ecnriptador de texto de Alura
 function decipher() {
     let resulText = '';
     let textToDecipher = document.getElementById('textImput').value;
@@ -77,6 +81,7 @@ function decipher() {
     return resulText;
 }
 
+//La función que nos permite mostar el mensaje en pantalla luego de pasar el texto por la función de cifrado cipher()
 function showEncryptedText() {
     let content = document.getElementById('textImput').value;
     let encryptedText = cipher(content)
@@ -88,8 +93,9 @@ function showEncryptedText() {
     adjustMessageDimensions();
     return;
 }
-document.getElementById('showResult').addEventListener('click', cipher);
+document.getElementById('showResult').addEventListener('click', cipher); //Acciona la función de cifrado de texto al hacer click al botón 'Encriptar'
 
+//La función que nos permite mostar el mensaje en pantalla luego de pasar el texto por la función de cifrado decipher()
 function showDecryptedText() {
     let content = document.getElementById('textImput').value;
     let decryptedText = decipher(content)
@@ -100,8 +106,9 @@ function showDecryptedText() {
     document.getElementById('copy').style.display = 'block';
     return;
 }
-document.getElementById('showDecryptedResult').addEventListener('click', decipher);
+document.getElementById('showDecryptedResult').addEventListener('click', decipher); //Acciona la función de descifrado de texto al hacer click al botón 'Desencriptar'
 
+//La función que nos permite copiar un texto mostrado en pantalla en un area determinada (El mensaje cifrado/descifrado para este caso)
 function copyText() {
     let textToCopy = document.getElementById('result').value;
     navigator.clipboard.writeText(textToCopy).then(
