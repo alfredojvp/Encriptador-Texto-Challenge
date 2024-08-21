@@ -8,6 +8,12 @@
     line-height: 150%;
 }
 
+.exclamation_logo {
+    width: 16px;
+    height: 16px;
+    padding-right: 10px;
+}
+
 .logo {
     padding-top: 0.625rem;
     margin-left: 0.625rem;
