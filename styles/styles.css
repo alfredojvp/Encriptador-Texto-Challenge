@@ -209,6 +209,10 @@ footer {
         margin-left: 140px;
         transform: translateY(-370px);
     }
+
+    footer {
+        width: 940px;
+    }
 }
 
 @media (max-width: 830px) {
@@ -218,11 +222,11 @@ footer {
     }
 
     footer {
-        width: 26.3rem;
+        width: 27.3rem;
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 725px) {
 
     .text-area {
         height: 138.4px;
@@ -237,7 +241,7 @@ footer {
     }
 
     footer {
-        width: 768px;
+        width: 790px;
     }
 }
 
@@ -258,7 +262,6 @@ footer {
         height: 3.125rem;
         
     }
-    ::placeholder {}
 
     .section__1 {
         width: 400px;
@@ -297,10 +300,37 @@ footer {
     }
 
     footer {
-        width: 13.43rem;
+        width: 13.5rem;
     }
 
     .footer__item {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 344px) {
+
+    .ciphered__message {
+        max-width: 244px;
+        margin-left: 260px;
+    }
+
+    .cipher__button {
+        width: 80%;
+        align-self: center;
+    }
+
+    .decipher__button {
+        width: 80%;
+        align-self: center;
+    }
+
+    .copy__button {
+        width: 70%;
+        margin-left: 85px;
+    }
+
+    footer {
+        width: 375px;
     }
 }
