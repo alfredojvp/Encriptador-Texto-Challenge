@@ -43,6 +43,16 @@ La página tiene un campo para inserción del texto que será encriptado o desen
 Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de procesar el texto. Esto nos permite copiar al portapapeles el resultado exacto del cifrado o descifrado del texto que introducimos
 <img src="./Others/Screenshot from 2024-08-24 14-37-17.png">
 
+<h3>Versión web móvil</h3>
+El proyecto se encuentra optimizado en su apartado gráfico para adaptarse a la pantalla de dispositivos móviles como teléfonos y tablets:
+
+#
+<h4>Versión web para teléfonos</h4>
+<img src="./Others/photo_2024-08-24_15-37-10.jpg">
+
+<h4>Versión web para tablets</h4>
+<img src="./Others/photo_2024-08-24_15-37-19.jpg">
+
 <h2>Contacto</h2>
 Puedes contactarme por los siguientes canales: 
 
