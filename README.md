@@ -43,8 +43,11 @@ La página tiene un campo para inserción del texto que será encriptado o desen
 Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de procesar el texto. Esto nos permite copiar al portapapeles el resultado exacto del cifrado o descifrado del texto que introducimos
 <img src="./Others/Screenshot from 2024-08-24 14-37-17.png">
 
-<h2>Contacto:</h2>
+<h2>Contacto</h2>
 Puedes contactarme por los siguientes canales: 
 
 * <label>LinkedIn: <a href="https://www.linkedin.com/feed/">Alfredo Velez<a></label>
 * <label>alfredojvp@hotmail.com</label>
+
+<h2>Licencia</h2>
+CypherPunk Decoder es un programa con <a href="https://github.com/alfredojvp/Encriptador-Texto-Challenge/blob/main/LICENSE">licencia MIT</a> que garantiza su libertad de uso y reproducción.
