@@ -46,5 +46,5 @@ Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de pr
 <h2>Contacto:</h2>
 Puedes contactarme por los siguientes canales: 
 
-* <a href="https://www.linkedin.com/feed/">Alfredo Velez</a>
-* alfredojvp@hotmail.com
+* <label>LinkedIn: <a href="https://www.linkedin.com/feed/">Alfredo Velez<a></label>
+* <label>alfredojvp@hotmail.com</label>
