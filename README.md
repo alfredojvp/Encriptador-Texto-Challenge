@@ -40,7 +40,7 @@ La página tiene un campo para inserción del texto que será encriptado o desen
 
 #
 
-Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de procesar el texto. Esto nos permite copiar en el portapapeles el resultado exacto del cifrado o descifrado del texto que introducimos
+Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de procesar el texto. Esto nos permite copiar al portapapeles el resultado exacto del cifrado o descifrado del texto que introducimos
 <img src="./Others/Screenshot from 2024-08-24 14-37-17.png">
 
 <h2>Contacto:</h2>
