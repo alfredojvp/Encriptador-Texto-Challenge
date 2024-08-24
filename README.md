@@ -46,7 +46,6 @@ Un botón de "Copiar" el mensaje encriptado/desencriptado aparecerá luego de pr
 <h3>Versión web móvil</h3>
 El proyecto se encuentra optimizado en su apartado gráfico para adaptarse a la pantalla de dispositivos móviles como teléfonos y tablets:
 
-#
 <h4>Versión web para teléfonos</h4>
 <img src="./Others/photo_2024-08-24_15-37-10.jpg">
 
